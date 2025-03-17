@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-logo-section">
           <img src={logo} alt="Tyrone Agro Chemicals" className="footer-logo" />
           <p className="footer-tagline">
-            Manufacturer of <span className="highlight">Pesticides & Fertilizer</span>
+            Manufacturer of <span className="highlight">Pesticides,BioPesticides & PGR </span>
           </p>
           <div className="footer-socials">
             <a href="#" target="_blank" rel="noopener noreferrer">
