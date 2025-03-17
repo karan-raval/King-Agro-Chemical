@@ -1,23 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png'; 
+import logo from '../assets/images/logo.png';
 import './header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header>
+    <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className="container">
-        {/* Logo Section */}
+        {/* Logo */}
         <div className="logo">
           <Link to="/">
             <img src={logo} alt="King Agro Chemicals" />
           </Link>
         </div>
 
-        {/* Navigation Section */}
+        {/* Navigation */}
         <nav>
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
             <Link to="/" className="active">Home</Link>
@@ -29,7 +46,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <Link to="/products">Products ▾</Link>
+              <Link>Products ▾</Link>
               {isDropdownOpen && (
                 <div className="dropdown-menu">
                   <Link to="/products/ampulse">Ampulse Packing</Link>
@@ -44,7 +61,7 @@ const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </div>
 
-          {/* Hamburger Icon */}
+          {/* Hamburger */}
           <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             &#9776;
           </div>

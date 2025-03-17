@@ -68,7 +68,7 @@ footer {
   .footer-links {
     flex: 1;
     display: flex;
-    gap: 40px;
+    gap: 150px;
   }
   
   .footer-column h4 {
