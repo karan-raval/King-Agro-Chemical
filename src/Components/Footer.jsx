@@ -13,12 +13,13 @@ const Footer = () => {
             Manufacturer of <span className="highlight">Pesticides,BioPesticides & PGR </span>
           </p>
           <div className="footer-socials">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/kingofagro?rdid=mtbneojk0Tk2DOcv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ACmXHRpsP%2F#" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/king_agro_chemicals?igsh=MWxnY3lmMnh2emV2NQ==" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
+            <a href="https://wa.me/8000014151"><i className="fab fa-whatsapp"></i></a>
           </div>
           <button className="footer-btn">Download Brochure</button>
         </div>
@@ -65,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Quick Enquiry Button */}
-      <div className="quick-enquiry">Quick Enquiry</div>
+      {/* <div className="quick-enquiry">Quick Enquiry</div> */}
     </footer>
   );
 };
