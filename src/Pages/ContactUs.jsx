@@ -100,9 +100,9 @@ const ContactUs = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423.23837595649144!2d70.80268512838975!3d22.264436185345055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca4f3ea51095%3A0x391bf3a62d0d1fe6!2sKing%20Agro%20Chemicals!5e0!3m2!1sen!2sin!4v1742206568032!5m2!1sen!2sin"
              width="600"
               height="450"
-                allowfullscreen=""
+                allowFullScreen=""
                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 referrerPolicy ="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <Footer />

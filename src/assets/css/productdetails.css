@@ -1,0 +1,107 @@
+/* AmpulseDetails.css */
+.ampulse-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .ampulse-header {
+    background-image: url("../images/hero.jpg"); /* Replace with your background */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .ampulse-content {
+    display: flex;
+    margin: 20px;
+  }
+  
+  /* Sidebar */
+  .ampulse-sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .ampulse-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ampulse-sidebar li {
+    padding: 12px;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s;
+  }
+  
+  .ampulse-sidebar li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .ampulse-sidebar .active {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  /* Product Details */
+  .ampulse-details {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .ampulse-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .ampulse-specifications {
+    margin-top: 20px;
+  }
+  
+  .spec-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .spec-label {
+    font-weight: bold;
+    background-color: #f9f9f9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ampulse-content {
+      flex-direction: column;
+    }
+  
+    .ampulse-sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .ampulse-image img {
+      max-width: 100%;
+    }
+  }
+  

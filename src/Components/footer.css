@@ -1,163 +1,169 @@
 /* Footer Container */
 footer {
-    background-color: #f3f3f3;
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-    border-top: 4px solid #7aa93c;
-  }
+  background-color: #f3f3f3;
+  /* padding: 40px 20px; */
+  padding-top:40px ;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  border-top: 4px solid #7aa93c;
+}
+
+/* Footer Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Left Section (Logo and Info) */
+.footer-logo-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.footer-tagline {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.footer-tagline .highlight {
+  font-weight: bold;
+  color: #517A38;
+}
+
+/* Social Media Icons */
+.footer-socials a {
+  color: #555;
+  font-size: 24px;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #4caf50;
+}
+
+/* Download Brochure Button */
+.footer-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.footer-btn:hover {
+  background-color: #45a049;
+}
+
+/* Middle Section (Navigation and Product) */
+.footer-links {
+  flex: 1;
+  display: flex;
+  gap: 138px;
   
-  /* Footer Layout */
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #7aa93c; /* Set all headings to the same color */
+}
+
+.footer-column a {
+  display: block;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #4caf50;
+}
+
+/* Right Section (Contact Details) */
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #7aa93c; /* Set heading color to match */
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  background-color: #7aa93c;
+  color: #fff;
+}
+
+.footer-bottom .highlight {
+  font-weight: bold;
+}
+
+/* Quick Enquiry Button */
+.quick-enquiry {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background-color: #7aa93c;
+  color: #fff;
+  padding: 10px 15px;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.quick-enquiry:hover {
+  background-color: #4caf50;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  /* Left Section (Logo and Info) */
-  .footer-logo-section {
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  .footer-logo {
-    height: 60px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-tagline {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-tagline .highlight {
-    font-weight: bold;
-    color: #4caf50;
-  }
-  
-  /* Social Media Icons */
-  .footer-socials a {
-    color: #555;
-    font-size: 24px;
-    margin-right: 10px;
-    transition: color 0.3s;
-  }
-  
-  .footer-socials a:hover {
-    color: #4caf50;
-  }
-  
-  /* Download Brochure Button */
-  .footer-btn {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 4px;
-  }
-  
-  .footer-btn:hover {
-    background-color: #45a049;
-  }
-  
-  /* Middle Section (Navigation and Product) */
+
   .footer-links {
-    flex: 1;
-    display: flex;
-    gap: 150px;
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .footer-column h4 {
-    font-size: 16px;
-    margin-bottom: 12px;
-    color: #333;
-  }
-  
-  .footer-column a {
-    display: block;
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 8px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-column a:hover {
-    color: #4caf50;
-  }
-  
-  /* Right Section (Contact Details) */
-  .footer-contact {
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  .footer-contact h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-contact p {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  /* Bottom Section */
-  .footer-bottom {
-    margin-top: 30px;
-    padding: 10px;
-    text-align: center;
-    background-color: #7aa93c;
-    color: #fff;
-  }
-  
-  .footer-bottom .highlight {
-    font-weight: bold;
-  }
-  
-  /* Quick Enquiry Button */
+
   .quick-enquiry {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    background-color: #7aa93c;
-    color: #fff;
-    padding: 10px 15px;
-    transform: rotate(-90deg);
-    transform-origin: right top;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    top: 80%;
   }
-  
-  .quick-enquiry:hover {
-    background-color: #4caf50;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .quick-enquiry {
-      top: 80%;
-    }
-  }
-  a{
-    text-decoration: none;
-    color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
 }

@@ -1,15 +1,30 @@
 import React from 'react'
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 const products = [
     { name: "Insecticides", image: "/path/to/insecticide.png" },
     { name: "Fungicides", image: "/path/to/fungicide.png" },
     { name: "Herbicides", image: "/path/to/herbicide.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
+    { name: "PGR", image: "/path/to/pgr.png" },
     { name: "PGR", image: "/path/to/pgr.png" }
   ];
 const PGR = () => {
   return (
     <>
+    <Header/>
+    <div className="hero-section">
+          <h1>PGR</h1>
+        </div>
       <Grid container spacing={2} justifyContent="center" sx={{ padding: 2 }}>
       {products.map((product, index) => (
         <Grid item xs={12} sm={6} md={3} key={index}>
@@ -38,6 +53,7 @@ const PGR = () => {
         </Grid>
       ))}
     </Grid>
+    <Footer/>
     </>
   )
 }

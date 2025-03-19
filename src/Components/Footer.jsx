@@ -3,14 +3,16 @@ import logo from '../assets/images/logo.png'; // Adjust the path to your logo
 import './footer.css';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
+    <>
     <footer>
       <div className="footer-container">
         {/* Left Section - Logo and Info */}
         <div className="footer-logo-section">
           <img src={logo} alt="Tyrone Agro Chemicals" className="footer-logo" />
           <p className="footer-tagline">
-            Manufacturer of <span className="highlight">Pesticides,BioPesticides & PGR </span>
+            <b> Manufacturer of </b> <br /> <span className="highlight">Pesticides, BioPesticides & PGR</span>
           </p>
           <div className="footer-socials">
             <a href="https://www.facebook.com/kingofagro?rdid=mtbneojk0Tk2DOcv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ACmXHRpsP%2F#" target="_blank" rel="noopener noreferrer">
@@ -57,17 +59,18 @@ const Footer = () => {
           <p><strong>Email:</strong> <a href="mailto:Kingagrochemicals@gmail.com">Kingagrochemicals@gmail.com</a></p>
         </div>
       </div>
+    </footer>
 
       {/* Bottom Section */}
       <div className="footer-bottom">
         <p>
-          © 2022 King Agro Chemicals All rights reserved. Managed by <span className="highlight">King Media</span>
+          © {currentYear} King Agro Chemicals All rights reserved. Managed by <span className="highlight">King Media</span>
         </p>
       </div>
 
       {/* Quick Enquiry Button */}
       {/* <div className="quick-enquiry">Quick Enquiry</div> */}
-    </footer>
+    </>
   );
 };
 

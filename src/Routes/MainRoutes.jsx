@@ -5,6 +5,8 @@ import AboutUs from '../Pages/AboutUs';
 import Download from '../Pages/Download';
 import ContactUs from '../Pages/ContactUs';
 import PGR from '../Pages/PGR';
+import AmpulsePacking from '../Pages/AmpulsePacking';
+import ProductDetails from '../Pages/ProductDetails';
 
 const MainRoutes = () => {
   return (
@@ -12,7 +14,8 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<AboutUs/>} />
-        <Route path="/products/ampulse" element={<h1>Ampulse Packing</h1>} />
+        <Route path="/product/:name" element={<ProductDetails />} />
+        <Route path="/products/ampulse" element={<AmpulsePacking/>} />
         <Route path="/products/insecticides" element={<h1>Insecticides</h1>} />
         <Route path="/products/fungicides" element={<h1>Fungicides</h1>} />
         <Route path="/products/pgr" element={<PGR/>} />
