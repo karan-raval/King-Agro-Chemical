@@ -2,21 +2,24 @@ import React from 'react'
 import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import KingPower from '../assets/images/King-Power.png' 
+import KingStar from '../assets/images/King-Star.png' 
+import HumiHub from '../assets/images/Humi-Hub.png' 
+import KingBlast from '../assets/images/King-Blast.png' 
+import Humiking from '../assets/images/Humiking.png' 
+import Nutriking from '../assets/images/Nutriking.png' 
+import RICHIRICH from '../assets/images/RICHI-RICH.png' 
+import NATURALKING from '../assets/images/NATURAL-KING.png' 
 
 const products = [
-    { name: "Insecticides", image: "/path/to/insecticide.png" },
-    { name: "Fungicides", image: "/path/to/fungicide.png" },
-    { name: "Herbicides", image: "/path/to/herbicide.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" },
-    { name: "PGR", image: "/path/to/pgr.png" }
+    { name: "King Power", image: KingPower  },
+    { name: "King Star", image: KingStar },
+    { name: "Humi-Hub", image: HumiHub },
+    { name: "King Blast", image: KingBlast },
+    { name: "Humiking", image: Humiking },
+    { name: "Nutriking", image: Nutriking },
+    { name: "RICHI RICH", image: RICHIRICH },
+    { name: "NATURAL KING", image: NATURALKING },
   ];
 const PGR = () => {
   return (

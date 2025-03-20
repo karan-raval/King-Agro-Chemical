@@ -7,9 +7,11 @@ import pgrGib5ml from "../assets/images/PGR-GIB-5ml.png"
 import larvicide5ml from "../assets/images/LARVICIDE.png"
 import viricide5ml from "../assets/images/VIRICIDE.png"
 import fungicide5ml from "../assets/images/FUNGICIDE.png"
-import MITYCIDE5ml from "../assets/images/MITYCIDE.png"
+import MIXMICRONUTRIENTS5ml from "../assets/images/MIX-MICRONUTRIENTS.png"
 import ALLSUCKINGPEST5ml from "../assets/images/ALLSUCKINGPEST.png"
 import BORERSPECIAL5ml from "../assets/images/BORERSPECIAL.png"
+import PGRGIB10ML from "../assets/images/PGR-GIB-10ML.png"
+import MITYCIDE5ML from "../assets/images/MITYCIDE.png"
 const AmpulsePacking = () => {
   const navigate = useNavigate();
     const products = [
@@ -18,12 +20,12 @@ const AmpulsePacking = () => {
         { name: "PGR (GIB)/10ML DONGLE PACK", image: "/path/to/herbicide.png" },
         { name: "PGR (6BA)/10ML DONGLE PACK", image: "/path/to/pgr.png" },
         { name: "PGR (6BA)/10ML", image: "/path/to/pgr.png" },
-        { name: "PGR (GIB)/10ML", image: "/path/to/pgr.png" },
-        { name: "MIX MICRONUTRIENTS", image: "/path/to/pgr.png" },
+        { name: "PGR (GIB)/10ML", image: PGRGIB10ML },
+        { name: "MIX MICRONUTRIENTS", image: MIXMICRONUTRIENTS5ml },
         { name: "FUNGICIDE", image: fungicide5ml },
         { name: "VIRICIDE", image: viricide5ml },
         { name: "LARVICIDE", image: larvicide5ml },
-        { name: "MITYCIDE", image: MITYCIDE5ml },
+        { name: "MITYCIDE", image: MITYCIDE5ML },
         { name: "ALL SUCKING PEST", image: ALLSUCKINGPEST5ml },
         { name: "BORER SPECIAL LARVICIDE", image: BORERSPECIAL5ml },
         { name: "ALL TYPES OF LARVA", image: "/path/to/pgr.png" },

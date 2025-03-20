@@ -114,7 +114,7 @@ footer {
 
 /* Bottom Section */
 .footer-bottom {
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px;
   text-align: center;
   background-color: #7aa93c;
@@ -148,6 +148,9 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .footer-logo {
+    height: 70px;
+  }
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
