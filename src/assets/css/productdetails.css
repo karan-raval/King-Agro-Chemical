@@ -1,107 +1,276 @@
 /* AmpulseDetails.css */
 .ampulse-container {
-    font-family: Arial, sans-serif;
-  }
-  
-  .ampulse-header {
-    background-image: url("../images/hero.jpg"); /* Replace with your background */
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    padding: 40px;
-    text-align: center;
-  }
-  
+  font-family: Arial, sans-serif;
+}
+
+.ampulse-header {
+  background-image: url("../images/hero.jpg"); 
+  background-size: cover;
+  background-position: center;
+  color: #ffff;
+  padding: 60px 20px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;;
+}
+
+.ampulse-content {
+  display: flex;
+  margin: 20px;
+}
+
+/* Sidebar */
+.sidebar-heading {
+  font-size: 20px;
+  color:#517A38;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 8px;
+}
+
+.ampulse-sidebar {
+  width: 250px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.ampulse-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ampulse-sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+
+.ampulse-sidebar li:hover {
+  background-color: #f1f1f1;
+  color: #4CAF50;
+}
+
+.ampulse-sidebar .active {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Product Details */
+.ampulse-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.ampulse-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.ampulse-specifications {
+  margin-top: 20px;
+}
+
+.spec-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.spec-label {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
   .ampulse-content {
-    display: flex;
-    margin: 20px;
+    gap: 20px;
   }
-  
-  /* Sidebar */
+
   .ampulse-sidebar {
-    width: 250px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-right: 1px solid #ddd;
+    width: 200px;
   }
-  
-  .ampulse-sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .ampulse-sidebar li {
-    padding: 12px;
-    cursor: pointer;
-    color: #333;
-    border-bottom: 1px solid #eee;
-    transition: background 0.3s;
-  }
-  
-  .ampulse-sidebar li:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .ampulse-sidebar .active {
-    background-color: #4CAF50;
-    color: #fff;
-  }
-  
-  /* Product Details */
-  .ampulse-details {
-    flex: 1;
-    padding: 20px;
-  }
-  
+
   .ampulse-image img {
+    max-width: 250px;
+  }
+
+  table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ampulse-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ampulse-sidebar {
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: block;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .ampulse-details {
+    padding: 15px;
+  }
+
+  .ampulse-image img {
+    max-width: 100%;
+  }
+
+  table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ampulse-header {
+    padding: 40px 15px;
+    font-size: 18px;
+    height: 200px;
+  }
+
+  .ampulse-sidebar li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .ampulse-details {
+    padding: 10px;
+  }
+
+  .spec-header {
+    font-size: 16px;
+  }
+
+  table td {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+.ampulse-image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Vertical slider (default) */
+.image-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.image-slider img {
+  width: 80px; /* Thumbnail ka fixed width */
+  height: 80px; /* Thumbnail ka fixed height */
+  object-fit: cover; /* Crop karega bina stretch kiye */
+  border-radius: 8px; /* Round edges ke liye */
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.image-slider img.active {
+  border: 2px solid #007bff;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ampulse-image-section {
+    flex-direction: column;
+    gap: 10px;
     margin-bottom: 20px;
   }
-  
-  .ampulse-specifications {
-    margin-top: 20px;
+
+  /* Horizontal slider below the main image */
+  .image-slider {
+    flex-direction: row;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
-  
-  .spec-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    font-weight: bold;
+
+  .image-slider img {
+    width: 50px;
+    height: 50px;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+
+  .main-image img {
+    max-width: 100%;
   }
-  
-  td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .spec-label {
-    font-weight: bold;
-    background-color: #f9f9f9;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .ampulse-content {
-      flex-direction: column;
-    }
-  
-    .ampulse-sidebar {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid #ddd;
-    }
-  
-    .ampulse-image img {
-      max-width: 100%;
-    }
-  }
-  
+}
+
+.main-image img {
+  width: 100%; /* Full width within container */
+  max-width: 400px; /* Max width set karo */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Image ko crop karega without distortion */
+  border-radius: 8px; /* Thoda curve dene ke liye */
+}
+
+.image-slider img {
+  width: 80px; /* Thumbnail ka fixed width */
+  height: 80px; /* Thumbnail ka fixed height */
+  object-fit: contain; /* Crop karega bina stretch kiye */
+  border-radius: 8px; /* Round edges ke liye */
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.image-slider img.active {
+  border-color: #007bff; /* Active image ko highlight karega */
+  transform: scale(1.05); /* Active thumbnail ko thoda bada dikhayega */
+}
+
+.image-slider::-webkit-scrollbar {
+  height: 5px;
+}
+
+.image-slider::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.image-slider::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
