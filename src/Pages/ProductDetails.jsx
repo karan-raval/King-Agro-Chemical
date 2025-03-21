@@ -44,18 +44,17 @@ const ProductDetails = () => {
     { name: "MIX MICRONUTRIENTS", images: [MIXMICRONUTRIENTS5ml, MICRONUTRIENTSSINGLE, MICRONUTIENTSPOST], commonName: "NUTRIKING", features: ["Maintain the all nutrient balance in plant make plant healthier and decrease the atomsphere stress Increase the enzyme balance in plant and growth of overall plant Increases fruit quality and yields Increases size, taste and colour of fruits"], dose: "10 ML / 15 liter water", packing: "10 ML X 5 Nos = 1 Tray (100 Tray X 1 Box)" },
     { name: "MITYCIDE", images: [MITYCIDE5ML, CAPTAINSINGLE, CAPTAINPOST2], commonName: "CAPTAIN", features: ["It control of sucking and chewing insects, such as thripes, mites, jassid and aphides. it make plant healthier and decrease the insect stress"], dose: "5 ML / 15 liter water", packing: "5 ML X 5 Nos = 1 Tray(100 Tray X 1 Box)" },
     { name: "ALL SUCKING PEST", images: [ALLSUCKINGPEST5ml, ALLSUCKINGPESTSINGLE, ALLSUCKINGPESTPOST], commonName: "COMMANDO", features: ["Control of sucking and chewing insects, such as plant hoppers, stink bugs Effective against Larva, Aphids and whiteflies it make plant healthier and decrease the insect stress"], dose: "5 ML / 15 liter water", packing: "5 ML X 5 Nos = 1 Tray (100 Tray X 1 Box)" },
-    { name: "BORER SPECIAL LARVICIDE ", images: [BORERSPECIAL5ml, SHOTTERSINGLE, SHOOTERPOST], commonName: "SHOOTER (SPECIALY FOR BRINJAL)", features: ["Effective against stem borer, shoot borer and all types of borer larvait has a toxic effect on eggs of some species and, in some cases, reduces fecundity it make plant healthier and decrease the insect stress"], dose: "5 ML / 15 liter water", packing: "5 ML X 5 Nos = 1 Tray (100 Tray X 1 Box) (CORN/BRINJAL/BORER SPECIAL )" },
-
-
+    { name: "BORER SPECIAL LARVICIDE", images: [BORERSPECIAL5ml, SHOTTERSINGLE, SHOOTERPOST], commonName: "SHOOTER (SPECIALY FOR BRINJAL)", features: ["Effective against stem borer, shoot borer and all types of borer larvait has a toxic effect on eggs of some species and, in some cases, reduces fecundity it make plant healthier and decrease the insect stress"], dose: "5 ML / 15 liter water", packing: "5 ML X 5 Nos = 1 Tray (100 Tray X 1 Box) (CORN/BRINJAL/BORER SPECIAL )" },
   ];
 
-  const product = products.find((p) => p.name === decodeURIComponent(name));
+  const decodedName = decodeURIComponent(name).trim().toLowerCase();
+const product = products.find((p) => p.name.trim().toLowerCase() === decodedName);
   const [selectedImage, setSelectedImage] = useState(product?.images[0]);
 
 
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <div>Product not found. Please check the URL.</div>;
   }
 
   useEffect(() => {
@@ -63,6 +62,10 @@ const ProductDetails = () => {
       // console.log("Setting image:", product.images[0]); // Debug ke liye
       setSelectedImage(product.images[0]);
     }
+    window.scrollTo(0, 0);
+    return () => {
+      setSelectedImage(null); // Cleanup function
+    };
   }, [product?.name]);
 
   return (

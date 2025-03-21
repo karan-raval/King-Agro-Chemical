@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/king_agro_chemicals?igsh=MWxnY3lmMnh2emV2NQ==" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="https://wa.me/8000014151"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/+918000014151"><i className="fab fa-whatsapp"></i></a>
           </div>
           <button className="footer-btn">Download Brochure</button>
         </div>

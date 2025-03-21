@@ -13,12 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;;
+  text-align: center;
 }
 
 .ampulse-content {
   display: flex;
   margin: 20px;
+  flex-wrap: wrap; /* Prevents content from breaking in small screens */
 }
 
 /* Sidebar */
@@ -35,8 +36,9 @@
 .ampulse-sidebar {
   width: 250px;
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 10px;
   border-right: 1px solid #ddd;
+  flex-shrink: 0;
 }
 
 .ampulse-sidebar ul {
@@ -130,7 +132,7 @@ td {
 
   .ampulse-sidebar {
     width: 100%;
-    padding: 15px;
+    /* padding: 10px; */
     border-right: none;
     border-bottom: 1px solid #ddd;
   }
@@ -156,7 +158,7 @@ td {
   }
 
   .ampulse-sidebar li {
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 14px;
   }
 
@@ -174,14 +176,13 @@ td {
   }
 }
 
-
-
-
+/* Image Section */
 .ampulse-image-section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Prevents images from getting cut off */
 }
 
 /* Vertical slider (default) */
@@ -190,13 +191,15 @@ td {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  max-height: 400px; /* Prevents overflow */
+  overflow-y: auto;
 }
 
 .image-slider img {
-  width: 80px; /* Thumbnail ka fixed width */
-  height: 80px; /* Thumbnail ka fixed height */
-  object-fit: cover; /* Crop karega bina stretch kiye */
-  border-radius: 8px; /* Round edges ke liye */
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Prevents image distortion */
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.3s ease;
   border: 2px solid transparent;
@@ -204,12 +207,15 @@ td {
 
 .image-slider img.active {
   border: 2px solid #007bff;
+  transform: scale(1.05);
 }
 
+/* Main Image */
 .main-image img {
   width: 100%;
   max-width: 400px;
   height: auto;
+  object-fit: contain; /* Ensures full image is visible */
   border-radius: 8px;
 }
 
@@ -227,6 +233,8 @@ td {
     justify-content: center;
     overflow-x: auto;
     overflow-y: hidden;
+    max-width: 100%;
+    white-space: nowrap; /* Prevents breaking */
   }
 
   .image-slider img {
@@ -236,34 +244,14 @@ td {
 
   .main-image img {
     max-width: 100%;
+    height: 320px;
   }
 }
 
-.main-image img {
-  width: 100%; /* Full width within container */
-  max-width: 400px; /* Max width set karo */
-  height: 300px; /* Fixed height */
-  object-fit: cover; /* Image ko crop karega without distortion */
-  border-radius: 8px; /* Thoda curve dene ke liye */
-}
-
-.image-slider img {
-  width: 80px; /* Thumbnail ka fixed width */
-  height: 80px; /* Thumbnail ka fixed height */
-  object-fit: contain; /* Crop karega bina stretch kiye */
-  border-radius: 8px; /* Round edges ke liye */
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.image-slider img.active {
-  border-color: #007bff; /* Active image ko highlight karega */
-  transform: scale(1.05); /* Active thumbnail ko thoda bada dikhayega */
-}
-
+/* Scrollbar improvements */
 .image-slider::-webkit-scrollbar {
   height: 5px;
+  width: 5px;
 }
 
 .image-slider::-webkit-scrollbar-thumb {
@@ -273,4 +261,63 @@ td {
 
 .image-slider::-webkit-scrollbar-track {
   background-color: #f1f1f1;
+}
+
+
+
+
+/* Fix for small screens (320px width) */
+@media (max-width: 320px) {
+  .ampulse-header {
+    padding: 30px 10px;
+    font-size: 16px;
+    height: 150px;
+  }
+
+  .ampulse-sidebar {
+    width: 100%;
+    /* padding: 10px; */
+  }
+
+  .ampulse-sidebar li {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .ampulse-details {
+    padding: 10px;
+  }
+
+  .ampulse-image img {
+    width: 100%;
+    max-width: 280px;
+      height: 180px; /* Adjusted for 320px screen */
+  }
+
+  .main-image img {
+    width: 100%;
+    max-width: 280px; /* Adjusted for 320px screen */
+    height: 180px;
+  }
+
+  /* Make image slider scrollable */
+  .image-slider {
+    flex-direction: row;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .image-slider img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .spec-header {
+    font-size: 14px;
+  }
+
+  table td {
+    padding: 4px;
+    font-size: 12px;
+  }
 }
