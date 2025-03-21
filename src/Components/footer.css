@@ -111,6 +111,9 @@ footer {
   margin-bottom: 5px;
   color: #555;
 }
+.anchor{
+  color: #fff;
+}
 
 /* Bottom Section */
 .footer-bottom {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import '../assets/css/contactus.css'
@@ -7,22 +7,56 @@ import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    enquiry_type: '',
+    message: '',
+    full_name: '',
+    company_name: '',
+    mobile: '',
+    email: '',
+    city: '',
+    country: '',
+  });
+  // 📝 Input Change Handler
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
+  // 📩 Send Email Function
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
+    const emailParams = {
+      enquiry: formData.enquiry_type,
+      company_name: formData.company_name,
+      number: formData.mobile,
+      email: formData.email,
+      city: formData.city,
+      country: formData.country,
+      message: formData.message,
+    };
+  
     emailjs
-      .sendForm(
-        'service_pm8j8sg', // Replace with your Service ID
-        'template_ji2x4ok', // Replace with your Template ID
-        form.current,
-        'WtLROtQn36UfRQFcY' // Replace with your Public Key
+      .send(
+        'service_pm8j8sg', // Service ID
+        'template_ji2x4ok', // Template ID
+        emailParams, // ✅ Pass Correct Object
+        'WtLROtQn36UfRQFcY' // Public Key
       )
       .then(
         (result) => {
           console.log('Message Sent:', result.text);
           alert('Message sent successfully!');
-          form.current.reset(); // Reset form after submission
+          setFormData({
+            enquiry_type: '',
+            message: '',
+            full_name: '',
+            company_name: '',
+            mobile: '',
+            email: '',
+            city: '',
+            country: '',
+          });
         },
         (error) => {
           console.log('Error:', error.text);
@@ -60,7 +94,7 @@ const ContactUs = () => {
  
             <div className="social-icons">
               <h2>Get Social</h2>
-              <a href="https://wa.me/8000014151"><i className="fab fa-whatsapp"></i></a>
+              <a href="https://wa.me/+918000014151"><i className="fab fa-whatsapp"></i></a>
               <a href="https://www.facebook.com/kingofagro?rdid=mtbneojk0Tk2DOcv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ACmXHRpsP%2F#"><i className="fab fa-facebook"></i></a>
               <a href="https://www.instagram.com/king_agro_chemicals?igsh=MWxnY3lmMnh2emV2NQ=="><i className="fab fa-instagram"></i></a>
             </div>
@@ -70,26 +104,26 @@ const ContactUs = () => {
           <div className="contact-form">
             <h2>Get in Touch with Us</h2>
             <form ref={form} onSubmit={sendEmail}>
-      <select name="enquiry_type" required>
-        <option value="">- Select for Enquiry -</option>
-        <option value="sales">Sales</option>
-        <option value="support">Support</option>
-        <option value="other">Other</option>
-      </select>
+              <select name="enquiry_type" value={formData.enquiry_type} onChange={handleChange} required>
+                <option value="">- Select for Enquiry -</option>
+                <option value="sales">Sales</option>
+                <option value="support">Support</option>
+                <option value="other">Other</option>
+              </select>
 
-      <textarea name="message" placeholder="Message" required></textarea>
-      <input type="text" name="full_name" placeholder="Full Name" required />
-      <input type="text" name="company_name" placeholder="Company Name" required />
-      <input type="tel" name="mobile" placeholder="Mobile / WhatsApp Number" required />
-      <input type="email" name="email" placeholder="Business Email Address" required />
-      
-      <div className="form-inline">
-        <input type="text" name="city" placeholder="City" required />
-        <input type="text" name="country" placeholder="Country" required />
-      </div>
+              <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" required></textarea>
+              <input type="text" name="full_name" value={formData.full_name} onChange={handleChange} placeholder="Full Name" required />
+              <input type="text" name="company_name" value={formData.company_name} onChange={handleChange} placeholder="Company Name" required />
+              <input type="tel" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Mobile / WhatsApp Number" required />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Business Email Address" required />
 
-      <button type="submit">Submit</button>
-    </form>
+              <div className="form-inline">
+                <input type="text" name="city" value={formData.city} onChange={handleChange} placeholder="City" required />
+                <input type="text" name="country" value={formData.country} onChange={handleChange} placeholder="Country" required />
+              </div>
+
+              <button type="submit">Submit</button>
+            </form>
           </div>
         </div>
 

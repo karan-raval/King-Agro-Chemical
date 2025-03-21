@@ -85,9 +85,24 @@ const Header = () => {
               </MenuItem>
             </Menu>
 
-            <Link to="/download" className={location.pathname === '/download' ? 'active' : ''}>
-              Download
-            </Link>
+            <Link
+  to="#"
+  className={location.pathname === '/download' ? 'active' : ''}
+  onClick={() => {
+    const pdfUrl = '../assets/Broucher/King Agro Chemicals_Rajkot_ Broucher.pdf'; // 📂 Public folder me PDF ka path
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'King Agro Chemicals_Rajkot_ Broucher'; // 📥 Custom file name for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // PDF ko new tab me open karne ke liye
+    window.open(pdfUrl, '_blank');
+  }}
+>
+  Download
+</Link>
             <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
               Contact Us
             </Link>

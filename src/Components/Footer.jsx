@@ -23,7 +23,11 @@ const Footer = () => {
             </a>
             <a href="https://wa.me/+918000014151"><i className="fab fa-whatsapp"></i></a>
           </div>
-          <button className="footer-btn">Download Brochure</button>
+          <button className="footer-btn">
+  <a className='anchor' href="../assets/Broucher/King Agro Chemicals_Rajkot_ Broucher.pdf" download="KingAgroChemicals_Brochure.pdf">
+    Download Brochure
+  </a>
+</button>
         </div>
 
         {/* Middle Section - Navigation and Products */}
