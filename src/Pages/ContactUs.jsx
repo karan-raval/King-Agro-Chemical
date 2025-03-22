@@ -85,8 +85,6 @@ const ContactUs = () => {
             </p>
             <br /><br /><br />
             <p>
-            <strong>Marketing:</strong> +91 80000 77779 / +91 80000 14151<br />
-            <strong>Quality Consultant:</strong> +91 80000 77779 / +91 80000 14151<br />
                <strong>For Sales Order:</strong>+91 80000 77779 / +91 80000 14151<br />
                <strong>Office:</strong> +91 80000 77779 / +91 80000 14151<br />
                <strong>Email:</strong>  <a style={{color:"white"}} href="mailto:Kingagrochemicals@gmail.com">Kingagrochemicals@gmail.com</a> <br />

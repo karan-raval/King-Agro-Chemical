@@ -11,15 +11,21 @@ import MIXMICRONUTRIENTS5ml from "../assets/images/MIX-MICRONUTRIENTS.png"
 import ALLSUCKINGPEST5ml from "../assets/images/ALLSUCKINGPEST.png"
 import BORERSPECIAL5ml from "../assets/images/BORERSPECIAL.png"
 import PGRGIB10ML from "../assets/images/PGR-GIB-10ML.png"
+import PGR6BA5ML from "../assets/images/PGR-6BA-5ML.png"
+import PGRGIB10MLDONGLEPACK from "../assets/images/PGR-GIB-10ML-DONGLE-PACK.png"
+import PGR6BA10MLDONGLEPACK from "../assets/images/PGR-6BA-10ML-DONGLE.png"
 import MITYCIDE5ML from "../assets/images/MITYCIDE.png"
+import PGR2ML from "../assets/images/PGR-2ML.png"
+import ALLTYPESOFLARVA from "../assets/images/ALL-TYPES-OF-LARVA.png"
+import PGR6BA10ML from "../assets/images/PGR-6BA-10ML.png"
 const AmpulsePacking = () => {
   const navigate = useNavigate();
     const products = [
         { name: "PGR (GIB)/5ML", image: pgrGib5ml },
-        { name: "PGR (6BA)/5ML", image: "/path/to/fungicide.png" },
-        { name: "PGR (GIB)/10ML DONGLE PACK", image: "/path/to/herbicide.png" },
-        { name: "PGR (6BA)/10ML DONGLE PACK", image: "/path/to/pgr.png" },
-        { name: "PGR (6BA)/10ML", image: "/path/to/pgr.png" },
+        { name: "PGR (6BA)/5ML", image: PGR6BA5ML },
+        { name: "PGR (GIB)/10ML DONGLE PACK", image:PGRGIB10MLDONGLEPACK},
+        { name: "PGR (6BA)/10ML DONGLE PACK", image: PGR6BA10MLDONGLEPACK },
+        { name: "PGR (6BA)/10ML", image: PGR6BA10ML },
         { name: "PGR (GIB)/10ML", image: PGRGIB10ML },
         { name: "MIX MICRONUTRIENTS", image: MIXMICRONUTRIENTS5ml },
         { name: "FUNGICIDE", image: fungicide5ml },
@@ -28,8 +34,8 @@ const AmpulsePacking = () => {
         { name: "MITYCIDE", image: MITYCIDE5ML },
         { name: "ALL SUCKING PEST", image: ALLSUCKINGPEST5ml },
         { name: "BORER SPECIAL LARVICIDE", image: BORERSPECIAL5ml },
-        { name: "ALL TYPES OF LARVA", image: "/path/to/pgr.png" },
-        { name: "PGR 2ML ", image: "/path/to/pgr.png" },
+        { name: "ALL TYPES OF LARVA", image: ALLTYPESOFLARVA },
+        { name: "PGR 2ML ", image: PGR2ML },
       ];
 
       const handleProductClick = (name) => {

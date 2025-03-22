@@ -8,7 +8,7 @@ margin: 0;
 
 /* Hero Section */
 .hero-section {
-  height: 400px;
+  height: 250px;
   background-image: url('../images/hero.jpg'); /* Update path */
   background-size:cover;
   background-position:center;

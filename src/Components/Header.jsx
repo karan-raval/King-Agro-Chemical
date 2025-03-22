@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';  // ✅ useLocation Import
 import { Menu, MenuItem } from '@mui/material';
 import logo from '../assets/images/logo.png';
 import './header.css';
+import pdf from  '../assets/Broucher/King Agro Chemicals_Rajkot_Broucher.pdf'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,20 +90,13 @@ const Header = () => {
   to="#"
   className={location.pathname === '/download' ? 'active' : ''}
   onClick={() => {
-    const pdfUrl = '../assets/Broucher/King Agro Chemicals_Rajkot_ Broucher.pdf'; // 📂 Public folder me PDF ka path
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'King Agro Chemicals_Rajkot_ Broucher'; // 📥 Custom file name for download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    // PDF ko new tab me open karne ke liye
-    window.open(pdfUrl, '_blank');
+    const pdfUrl = pdf // ✅ Correct Path
+    window.open(pdfUrl, '_blank'); // 📂 PDF New Tab me Open
   }}
 >
   Download
 </Link>
+
             <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
               Contact Us
             </Link>

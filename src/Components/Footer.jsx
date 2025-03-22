@@ -36,7 +36,7 @@ const Footer = () => {
             <h4>Navigation</h4>
             <Link to="/">Home</Link>
             <Link to="/about">About Us</Link>
-            <Link to="/products">Products</Link>
+            <Link >Products</Link>
             <Link to="/download">Download</Link>
             <Link to="/contact">Contact Us</Link>
           </div>
@@ -56,8 +56,6 @@ const Footer = () => {
           <p>
             Red. Office. 14/4 Corner, Atika Industrial Area, Banshidhar Chowk, Rajkot – Gujarat -360003
           </p>
-          <p><strong>Marketing:</strong> +91 80000 77779 / +91 80000 14151</p>
-          <p><strong>Quality Consultant:</strong> +91 80000 77779 / +91 80000 14151</p>
           <p><strong>For Sales Order:</strong> +91 80000 77779 / +91 80000 14151</p>
           <p><strong>Office:</strong> +91 80000 77779 / +91 80000 14151</p>
           <p><strong>Email:</strong> <a href="mailto:Kingagrochemicals@gmail.com">Kingagrochemicals@gmail.com</a></p>
