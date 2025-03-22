@@ -1,70 +1,90 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Grid, Typography, Card, CardContent, Box } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { Grid, Typography, Card, Box, Table, TableBody, TableCell, TableContainer, TableRow, Paper } from '@mui/material';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-
-import KingPower from "../assets/images/King-Power.png";
-import KingStar from "../assets/images/King-Star.png";
-import HumiHub from "../assets/images/Humi-Hub.png";
-import KingBlast from "../assets/images/King-Blast.png";
-import Humiking from "../assets/images/Humiking.png";
-import Nutriking from "../assets/images/Nutriking.png";
-import RICHIRICH from "../assets/images/RICHI-RICH.png";
-import NATURALKING from "../assets/images/NATURAL-KING.png";
+import '../assets/css/singlepgr.css'
+import KingPower from '../assets/images/King-Power.png' 
+import KingStar from '../assets/images/King-Star.png' 
+import HumiHub from '../assets/images/Humi-Hub.png' 
+import KingBlast from '../assets/images/King-Blast.png' 
+import Humiking from '../assets/images/Humiking.png' 
+import Nutriking from '../assets/images/Nutriking.png' 
 
 const products = {
     "king-power": {
-        name: "King Power",
+        Name: "King Power",
         image: KingPower,
         description: "High-quality growth enhancer for plants.",
         TargetCrops: "All Vegetables, Fruits and crops",
-        Form: "Liquid",
-        PackType: "Bottle packing",
-        Color: "Black",
         Dose: "20 ml per 15 ltr. water",
-        OrganicType: "Organic",
-        Dilution: "15 litre water",
         Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
         Brand: "King Power",
-        PackagingSize: "100 ml To 1 Litre"
+        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
     },
     "king-star": {
-        name: "King Star",
+        Name: "King Star",
         image: KingStar,
         description: "Boosts plant immunity and overall health.",
         TargetCrops: "All Vegetables, Fruits and crops",
-        Form: "Liquid",
+        Materials: "Humic, SNP",
         PackType: "Bottle packing",
-        Color: "Black",
         Dose: "20 ml per 15 ltr. water",
-        OrganicType: "Organic",
-        Dilution: "15 litre water",
         Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
         Brand: "King Star",
-        PackagingSize: "100 ml To 1 Litre"
+        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
     },
     "humi-hub": {
-        name: "Humi-Hub",
+        Name: "Humi-Hub",
         image: HumiHub,
         description: "Improves soil fertility and moisture retention.",
+        Materials: "Humic, Amino, Fulvic",
         TargetCrops: "All Vegetables, Fruits and crops",
-        Form: "Liquid",
-        PackType: "Bottle packing",
-        Color: "Black",
         Dose: "20 ml per 15 ltr. water",
-        OrganicType: "Organic",
-        Dilution: "15 litre water",
         Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
         Brand: "HumiHub",
-        PackagingSize: "100 ml To 1 Litre"
+        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
     },
+    "king-blast": {
+        Name: "King Blast",
+        image: KingBlast,
+        TargetCrops: "All Vegetables, Fruits and crops",
+        Materials: "Humic, Amino, Fulvic, Seaweed",
+        Dose: "20 ml per 15 ltr. water",
+        Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
+        Brand: "King Blast",
+        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
+    },
+    "humiking": {
+        Name: "Humiking",
+        image: Humiking,
+        TargetCrops: "All Vegetables, Fruits and crops",
+        Materials: "Humic Liquid",
+        Dose: "20 ml per 15 ltr. water",
+        Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
+        Brand: "Humiking",
+        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
+    },
+    "nutriking": {
+        Name: "Nutriking",
+        image: Nutriking,
+        description: "MIX MICRONUTRENT",
+        TargetCrops: "All Vegetables, Fruits and crops",
+        Materials: "All Micronutrient",
+        Dose: "20 ml per 15 ltr. water",
+        Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
+        Brand: "Nutriking",
+        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
+    }
 };
 
 const SinglePGR = () => {
     const { productId } = useParams();
-    const product = products[productId];
-    console.log(product)
+    const [product, setProduct] = useState(products[productId]);
+
+    useEffect(() => {
+        setProduct(products[productId]);
+    }, [productId]);
 
     if (!product) {
         return <Typography variant="h4" textAlign="center" mt={4}>Product Not Found</Typography>;
@@ -72,53 +92,62 @@ const SinglePGR = () => {
     return (
         <>
             <Header />
-            {/* Hero Section */}
-            <div className="hero-section" style={{
-                background: "url('/path-to-bg-image.jpg') no-repeat center/cover",
-                padding: "40px 0",
-                textAlign: "center",
-                color: "#fff"
-            }}>
-                <Typography variant="h3" fontWeight="bold">{product.name}</Typography>
+            
+            <div className="hero-section" >
+                <Typography variant="h3" fontWeight="bold" >{product.Name}</Typography>
             </div>
 
-            {/* Main Content */}
             <Grid container spacing={2} sx={{ padding: "20px 5%" }}>
-                {/* Left Sidebar */}
+                {/* Sidebar */}
                 <Grid item xs={12} md={3}>
                     <Card sx={{ padding: 2 }}>
-                        <Typography variant="h6" fontWeight="bold" sx={{ borderBottom: "2px solid green", paddingBottom: 1 }}>PGR PRODUCTS</Typography>
-                        {Object.keys(products).map((key) => (
-                            <Typography
-                                key={key}
-                                sx={{ padding: "8px 0", cursor: "pointer", color: key === productId ? "green" : "black" }}
-                            >
-                                {products[key].name}
-                            </Typography>
-                        ))}
+                        <Typography variant="h6" fontWeight="bold" sx={{ background: "#2E7D32", color: "white", padding: 1, textAlign: "center" }}>PGR PRODUCTS</Typography>
+                        <Box sx={{ display: "flex", flexDirection: "column", mt: 2 }}>
+                            {Object.keys(products).map((key) => (
+                                <Link to={`/product/pgr/${key}`} key={key} style={{ textDecoration: "none", color: "inherit" }}>
+                                    <Typography
+                                        sx={{ padding: "8px 12px", cursor: "pointer", background: key === productId ? "#C8E6C9" : "transparent", borderRadius: "5px", '&:hover': { background: "#A5D6A7" } }}
+                                    >
+                                        {products[key].Name}
+                                    </Typography>
+                                </Link>
+                            ))}
+                        </Box>
                     </Card>
                 </Grid>
 
                 {/* Product Details */}
                 <Grid item xs={12} md={9}>
-                    <Card sx={{ padding: 3, textAlign: "center" }}>
-                        <img src={product.image} alt={product.name} style={{ maxWidth: "200px", marginBottom: "20px" }} />
-                        <Typography variant="h4" fontWeight="bold">{product.name}</Typography>
-                        <Typography variant="body1" color="textSecondary" sx={{ marginBottom: 2 }}>{product.description}</Typography>
+                    <Card sx={{ padding: 3 }}>
+                        <Grid container spacing={2} alignItems="center">
+                            <Grid item xs={12} md={4} textAlign="center">
+                                <img src={product.image} alt={product.Name} style={{ maxWidth: "70%" }} />
+                            </Grid>
+                            <Grid item xs={12} md={8}>
+                <Typography variant="h3" fontWeight="bold" sx={{ color: "#2E7D32"}} >{product.Name}</Typography>
+                                {/* <Typography variant="h4" fontWeight="bold" >{product.Name}</Typography> */}
+                                <Typography variant="body1" color="textSecondary" sx={{ marginBottom: 2,color: "black" }}>{product.description}</Typography>
 
-                        <Box mt={3} textAlign="left">
-                            <Typography variant="h6" fontWeight="bold" sx={{ borderBottom: "2px solid green", paddingBottom: 1 }}>SPECIFICATIONS</Typography>
-                            <Typography variant="body1"><strong>Target Crops:</strong> {product.TargetCrops}</Typography>
-                            <Typography variant="body1"><strong>Form:</strong> {product.Form}</Typography>
-                            <Typography variant="body1"><strong>Pack Type:</strong> {product.PackType}</Typography>
-                            <Typography variant="body1"><strong>Color:</strong> {product.Color}</Typography>
-                            <Typography variant="body1"><strong>Dose:</strong> {product.Dose}</Typography>
-                            <Typography variant="body1"><strong>Organic Type:</strong> {product.OrganicType}</Typography>
-                            <Typography variant="body1"><strong>Dilution:</strong> {product.Dilution}</Typography>
-                            <Typography variant="body1"><strong>Application:</strong> {product.Application}</Typography>
-                            <Typography variant="body1"><strong>Brand:</strong> {product.Brand}</Typography>
-                            <Typography variant="body1"><strong>Packaging Size:</strong> {product.PackagingSize}</Typography>
-                        </Box>
+                                {/* Table Section */}
+                                <Box mt={3}>
+                                    <Typography variant="h6" fontWeight="bold" sx={{ background: "#2E7D32", color: "white", padding: 1, textAlign: "center" }}>SPECIFICATIONS</Typography>
+                                    <TableContainer component={Paper} sx={{ mt: 2, boxShadow: "none" }}>
+                                        <Table>
+                                            <TableBody>
+                                                {Object.entries(product).map(([key, value]) => (
+                                                    key !== "image" && key !== "description" && (
+                                                        <TableRow key={key}>
+                                                            <TableCell sx={{ fontWeight: "bold", background: "#E8F5E9", fontSize: "0.875rem", padding: "4px 8px" }}>{key.replace(/([A-Z])/g, ' $1').trim()}</TableCell>
+                                                            <TableCell sx={{ fontSize: "0.875rem", padding: "4px 8px" }}>{value}</TableCell>
+                                                        </TableRow>
+                                                    )
+                                                ))}
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </Box>
+                            </Grid>
+                        </Grid>
                     </Card>
                 </Grid>
             </Grid>
@@ -128,4 +157,4 @@ const SinglePGR = () => {
     )
 }
 
-export default SinglePGR
+export default SinglePGR;

@@ -9,8 +9,6 @@ import HumiHub from '../assets/images/Humi-Hub.png'
 import KingBlast from '../assets/images/King-Blast.png' 
 import Humiking from '../assets/images/Humiking.png' 
 import Nutriking from '../assets/images/Nutriking.png' 
-import RICHIRICH from '../assets/images/RICHI-RICH.png' 
-import NATURALKING from '../assets/images/NATURAL-KING.png' 
 
 const products = [
     { id: "king-power", name: "King Power", image: KingPower },
@@ -19,8 +17,6 @@ const products = [
     { id: "king-blast", name: "King Blast", image: KingBlast },
     { id: "humiking", name: "Humiking", image: Humiking },
     { id: "nutriking", name: "Nutriking", image: Nutriking },
-    { id: "richi-rich", name: "RICHI RICH", image: RICHIRICH },
-    { id: "natural-king", name: "NATURAL KING", image: NATURALKING },
 ];
 
 const PGR = () => {

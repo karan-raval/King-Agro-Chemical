@@ -7,8 +7,17 @@ import product4 from "../assets/images/FUNGICIDE.png"; // Product Image
 import product5 from "../assets/images/MIX-MICRONUTRIENTS.png"; // Product Image
 import product6 from "../assets/images/BORERSPECIAL.png"; // Product Image
 import product7 from "../assets/images/King-Power.png"; // Product Image
+import product8 from "../assets/images/Nutriking.png"; // Product Image
 import aboutImage from "../assets/images/About-us-section.png"; // Product Image
 import "../assets/css/home.css"; // Import styles
+import Header from "../Components/Header"
+import Footer from "../Components/Footer"
+import ProductSection from "../Components/ProductSection";
+
+import icon1 from '../assets/images/quality-products.png'
+import icon2 from '../assets/images/satisfied-customers.png'
+import icon3 from '../assets/images/dedicated-team.png'
+import icon4 from '../assets/images/dealer-outlets.png'
 // 
 // ✅ Slider Data
 const slides = [
@@ -57,6 +66,13 @@ const slides = [
   
 ];
 
+const sectionData1 = [
+  { img: icon1, title: "138+ ", description: "Quality Products" },
+  { img: icon2, title: "15000+ ", description: "Satisfied Customers" },
+  { img: icon3, title: "200+ ", description: "Dedicated Team" },
+  { img: icon4, title: "1000+ ", description: "Dealer Outlets" }
+];
+
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -80,6 +96,7 @@ const Home = () => {
 
   return (
     <>
+    <Header/>
     <div className="slider-container">
       {slides.map((slide, index) => (
         <div
@@ -115,36 +132,57 @@ const Home = () => {
     </div>
 
 
-// about us section
+{/* // about us section */}
 
 <section className="about-section">
       <div className="about-container">
         {/* ✅ Left Side (Images) */}
         <div className="about-images">
-          <img src={aboutImage} alt="About" className="farm-image" />
-          {/* <div className="small-circle"> */}
-            {/* <img src={aboutImage} alt="Small Circle" className="small-image" /> */}
-            {/* <img src={aboutImage} alt="Product" className="product-image" /> */}
-          {/* </div> */}
-        </div>
+  <img src={aboutImage} alt="About" className="farm-image" />
+  <div className="small-circle">
+    <img src={product8} alt="Product" className="left-product" />
+    <img src={product7} alt="Product" className="right-product" />
+  </div>
+</div>
+
+
 
         {/* ✅ Right Side (Text Content) */}
-        <div className="about-content">
+        <div className="about-contentt">
           <h3 className="about-title">ABOUT US</h3>
           <h2 className="about-heading">
             We Are The Leader In <br />
-            <span>Manufacturer of Pesticides & Fertilizer</span>
+            <span>Manufacturer of Pesticides & PGR</span>
           </h2>
           <p className="about-text">
-            Established in 2020, Tyrone Agro Chemicals Private Limited, are among the
+            Established in 2014, King Agro Chemicals, are among the
             prominent Manufacturers and Suppliers of a diverse assortment of
-            Agriculture Pesticides, Agriculture Fungicide, Herbicides, Plant Growth
-            Promoter, etc. We are also bulk supplier of all types of agriculture pesticides.
+            Agriculture Pesticides, Fungicide,Plant Growth Promoter, etc. 
+            We are also bulk supplier of all types of agriculture Products.
           </p>
-          <button className="about-button">READ MORE</button>
         </div>
       </div>
     </section>
+
+    {/*  */}
+    <ProductSection/>
+    {/*  */}
+
+
+    {/*  */}
+     <div className="section">
+        {sectionData1.map((item, index) => (
+          <div className="box" key={index}>
+            <img src={item.img} alt={item.title} />
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="highlight-section">Farmer... you are never alone</div>
+    {/*  */}
+    <Footer/>
 
 
 </>
