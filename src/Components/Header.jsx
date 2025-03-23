@@ -75,19 +75,15 @@ const Header = () => {
               <MenuItem onClick={handleDropdownClose} component={Link} to="/products/ampulse">
                 Ampulse Packing
               </MenuItem>
-              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/insecticides">
-                Insecticides
-              </MenuItem>
-              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/fungicides">
-                Fungicides
-              </MenuItem>
               <MenuItem onClick={handleDropdownClose} component={Link} to="/products/pgr">
                 PGR
+              </MenuItem>
+              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/fungicides">
+                Other Product
               </MenuItem>
             </Menu>
 
             <Link
-  to="#"
   className={location.pathname === '/download' ? 'active' : ''}
   onClick={() => {
     const pdfUrl = pdf // ✅ Correct Path
