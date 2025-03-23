@@ -67,10 +67,10 @@ const slides = [
 ];
 
 const sectionData1 = [
-  { img: icon1, title: "138+ ", description: "Quality Products" },
-  { img: icon2, title: "15000+ ", description: "Satisfied Customers" },
-  { img: icon3, title: "200+ ", description: "Dedicated Team" },
-  { img: icon4, title: "1000+ ", description: "Dealer Outlets" }
+  { img: icon1, title: "100+ ", description: "Quality Products" },
+  { img: icon2, title: "50000+ ", description: "Satisfied Customers" },
+  { img: icon3, title: "100+ ", description: "Dedicated Team" },
+  { img: icon4, title: "1100+ ", description: "Dealer Outlets" }
 ];
 
 const Home = () => {
