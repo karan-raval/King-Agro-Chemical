@@ -10,6 +10,7 @@ import ProductDetails from '../Pages/ProductDetails';
 import PageNotFound from '../Pages/PageNotFound';
 import SinglePGR from '../Pages/SinglePGR';
 import OtherProduct from '../Pages/OtherProduct';
+import OtherSinplePage from '../Pages/OtherSinplePage';
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
         <Route path="/product/:name" element={<ProductDetails />} />
         <Route path="/products/ampulse" element={<AmpulsePacking/>} />
         <Route path="/products/other-product" element={<OtherProduct/>} />
+        <Route path="/products/other-product/:productId" element={<OtherSinplePage/>} />
         <Route path="/products/pgr" element={<PGR/>} />
         <Route path="/product/pgr/:productId" element={<SinglePGR />} />
         <Route path="/download" element={<Download/>} />

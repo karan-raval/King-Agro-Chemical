@@ -11,7 +11,7 @@ import FulvicAcid from '../assets/images/Fulvic-Acid.png'
 import EmamectionBenzoate from '../assets/images/Emamection-Benzoate.png'
 
 const products = [
-    { id: "fungiking", name: "FungiKing", image: fungiking },
+    { id: "Fungi king", name: "Fungi King", image: fungiking },
     { id: "Silicon Spreaders", name: "Silicon Spreaders", image: SiliconSpreaders },
     { id: "PGR Tablets", name: "PGR Tablets", image: PGRTablets },
     { id: "Humic Shinny Ball", name: "Humic Shinny Ball", image: HumicShinnyBall },
@@ -30,7 +30,7 @@ const OtherProduct = () => {
           <Grid container spacing={2} justifyContent="center" sx={{ padding: 2 }}>
             {products.map((product) => (
               <Grid item xs={12} sm={6} md={3} key={product.id}>
-                <Link to={`/product/pgr/${product.id}`} style={{ textDecoration: "none" }}>
+                <Link to={`/products/other-product/${product.id}`} style={{ textDecoration: "none" }}>
                   <Card
                     sx={{
                       '&:hover': { transform: 'scale(1.05)', transition: '0.3s' },
