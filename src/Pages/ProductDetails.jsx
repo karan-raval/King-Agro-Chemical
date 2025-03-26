@@ -124,7 +124,6 @@ const product = products.find((p) => p.name.trim().toLowerCase() === decodedName
                     alt={product.name}
                     className={selectedImage === img ? "active" : ""}
                     onClick={() => {
-                      // console.log("Selected Image:", img);
                       setSelectedImage(img);
                     }}
                   />
