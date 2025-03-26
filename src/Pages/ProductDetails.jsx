@@ -110,12 +110,10 @@ const product = products.find((p) => p.name.trim().toLowerCase() === decodedName
           {/* Product Details */}
           <div className="ampulse-details">
             <div className="ampulse-image-section">
-              {/* Main Image */}
               <div className="main-image">
                 <img src={selectedImage} alt={product.name} />
               </div>
 
-              {/* Image Slider */}
               <div className="image-slider">
                 {product.images.map((img, index) => (
                   <img
@@ -131,7 +129,6 @@ const product = products.find((p) => p.name.trim().toLowerCase() === decodedName
               </div>
             </div>
 
-            {/* Specifications */}
             <h2>{product.name}</h2>
             <div className="ampulse-specifications">
               <div className="spec-header">SPECIFICATIONS</div>
