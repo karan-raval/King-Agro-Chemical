@@ -73,12 +73,11 @@ const product = products.find((p) => p.name.trim().toLowerCase() === decodedName
 
   useEffect(() => {
     if (product?.images.length > 0) {
-      // console.log("Setting image:", product.images[0]); // Debug ke liye
       setSelectedImage(product.images[0]);
     }
     window.scrollTo(0, 0);
     return () => {
-      setSelectedImage(null); // Cleanup function
+      setSelectedImage(null); 
     };
   }, [product?.name]);
 
@@ -107,7 +106,6 @@ const product = products.find((p) => p.name.trim().toLowerCase() === decodedName
             </ul>
           </div>
 
-          {/* Product Details */}
           <div className="ampulse-details">
             <div className="ampulse-image-section">
               <div className="main-image">
