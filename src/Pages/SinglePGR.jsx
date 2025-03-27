@@ -98,7 +98,6 @@ const SinglePGR = () => {
             </div>
 
             <Grid container spacing={2} sx={{ padding: "20px 5%" }}>
-                {/* Sidebar */}
                 <Grid item xs={12} md={3}>
                     <Card sx={{ padding: 2 }}>
                         <Typography variant="h6" fontWeight="bold" sx={{ background: "#2E7D32", color: "white", padding: 1, textAlign: "center" }}>PGR PRODUCTS</Typography>
@@ -116,7 +115,6 @@ const SinglePGR = () => {
                     </Card>
                 </Grid>
 
-                {/* Product Details */}
                 <Grid item xs={12} md={9}>
                     <Card sx={{ padding: 3 }}>
                         <Grid container spacing={2} alignItems="center">
@@ -125,10 +123,8 @@ const SinglePGR = () => {
                             </Grid>
                             <Grid item xs={12} md={8}>
                 <Typography variant="h3" fontWeight="bold" sx={{ color: "#2E7D32"}} >{product.Name}</Typography>
-                                {/* <Typography variant="h4" fontWeight="bold" >{product.Name}</Typography> */}
                                 <Typography variant="body1" color="textSecondary" sx={{ marginBottom: 2,color: "black" }}>{product.description}</Typography>
 
-                                {/* Table Section */}
                                 <Box mt={3}>
                                     <Typography variant="h6" fontWeight="bold" sx={{ background: "#2E7D32", color: "white", padding: 1, textAlign: "center" }}>SPECIFICATIONS</Typography>
                                     <TableContainer component={Paper} sx={{ mt: 2, boxShadow: "none" }}>
