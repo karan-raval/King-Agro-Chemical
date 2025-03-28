@@ -105,7 +105,6 @@ const Home = () => {
             backgroundImage: `url(${slide.background})`,
           }}
         >
-          {/* ✅ Right Side Content (Product, Title, Subtitle, Button) */}
           <div className="right-content">
             <img src={slide.product} alt="Product" className="product-image" />
             <h2 className="slide-title">{slide.title}</h2>
