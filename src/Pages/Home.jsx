@@ -76,7 +76,6 @@ const sectionData1 = [
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // ✅ Auto-slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -115,11 +114,9 @@ const Home = () => {
         </div>
       ))}
 
-      {/* ✅ Navigation Buttons */}
       <button className="prev" onClick={prevSlide}>&#10094;</button>
       <button className="next" onClick={nextSlide}>&#10095;</button>
 
-      {/* ✅ Dots Indicator */}
       <div className="dots">
         {slides.map((_, index) => (
           <span
