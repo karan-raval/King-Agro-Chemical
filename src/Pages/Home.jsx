@@ -13,13 +13,11 @@ import "../assets/css/home.css"; // Import styles
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import ProductSection from "../Components/ProductSection";
-
 import icon1 from '../assets/images/quality-products.png'
 import icon2 from '../assets/images/satisfied-customers.png'
 import icon3 from '../assets/images/dedicated-team.png'
 import icon4 from '../assets/images/dealer-outlets.png'
-// 
-// ✅ Slider Data
+
 const slides = [
   {
     id: 1,
