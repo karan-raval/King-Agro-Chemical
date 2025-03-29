@@ -4,8 +4,8 @@ import product1 from "../assets/images/PGR-GIB-5ml.png"; // Product Image
 import product2 from "../assets/images/MITYCIDE.png"; // Product Image
 import product3 from "../assets/images/LARVICIDE.png"; // Product Image
 import product4 from "../assets/images/FUNGICIDE.png"; // Product Image
-import product5 from "../assets/images/MIX-MICRONUTRIENTS.png"; // Product Image
-import product6 from "../assets/images/BORERSPECIAL.png"; // Product Image
+import product5 from "../assets/images/MIX-MICRONUTRIENTS.png"; 
+import product6 from "../assets/images/BORERSPECIAL.png"; 
 import product7 from "../assets/images/King-Power.png"; 
 import product8 from "../assets/images/Nutriking.png"; 
 import aboutImage from "../assets/images/About-us-section.png"; 
