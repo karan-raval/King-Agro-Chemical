@@ -169,8 +169,6 @@ const Home = () => {
       <div className="highlight-section">Farmer... you are never alone</div>
       {/*  */}
       <Footer />
-
-
     </>
   );
 };
