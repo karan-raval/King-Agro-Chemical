@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sliderbg1 from "../assets/images/banner-1.jpg"; // Background Image
-import product1 from "../assets/images/PGR-GIB-5ml.png"; // Product Image
-import product2 from "../assets/images/MITYCIDE.png"; // Product Image
+import product1 from "../assets/images/PGR-GIB-5ml.png";
+import product2 from "../assets/images/MITYCIDE.png"; 
 import product3 from "../assets/images/LARVICIDE.png"; 
 import product4 from "../assets/images/FUNGICIDE.png"; 
 import product5 from "../assets/images/MIX-MICRONUTRIENTS.png"; 
