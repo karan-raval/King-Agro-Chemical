@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import sliderbg1 from "../assets/images/banner-1.jpg"; // Background Image
+import sliderbg1 from "../assets/images/banner-1.jpg";
 import product1 from "../assets/images/PGR-GIB-5ml.png";
 import product2 from "../assets/images/MITYCIDE.png"; 
 import product3 from "../assets/images/LARVICIDE.png"; 
@@ -123,9 +123,6 @@ const Home = () => {
         ))}
       </div>
     </div>
-
-
-{/* // about us section */}
 
 <section className="about-section">
       <div className="about-container">
