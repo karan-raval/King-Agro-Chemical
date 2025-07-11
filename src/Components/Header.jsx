@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';  // ✅ useLocation Import
 import { Menu, MenuItem } from '@mui/material';
 import logo from '../assets/images/logo.png';
 import './header.css';
-import pdf from  '../assets/Broucher/King Agro Chemicals_Rajkot_Broucher.pdf'
+import pdf from '../assets/Broucher/King Agro Chemicals_Rajkot_Broucher.pdf'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,20 +78,26 @@ const Header = () => {
               <MenuItem onClick={handleDropdownClose} component={Link} to="/products/pgr">
                 PGR
               </MenuItem>
+              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/Pesticides">
+                PESTICIDES
+              </MenuItem>
+              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/pgr">
+                BIO-PESTICIDES
+              </MenuItem>
               <MenuItem onClick={handleDropdownClose} component={Link} to="/products/other-product">
                 Other Product
               </MenuItem>
             </Menu>
 
             <Link
-  className={location.pathname === '/download' ? 'active' : ''}
-  onClick={() => {
-    const pdfUrl = pdf // ✅ Correct Path
-    window.open(pdfUrl, '_blank'); // 📂 PDF New Tab me Open
-  }}
->
-  Download
-</Link>
+              className={location.pathname === '/download' ? 'active' : ''}
+              onClick={() => {
+                const pdfUrl = pdf // ✅ Correct Path
+                window.open(pdfUrl, '_blank'); // 📂 PDF New Tab me Open
+              }}
+            >
+              Download
+            </Link>
 
             <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
               Contact Us
