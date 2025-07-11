@@ -9,12 +9,14 @@ import HumiHub from '../assets/images/Humi-Hub.png';
 import KingBlast from '../assets/images/King-Blast.png';
 import Humiking from '../assets/images/Humiking.png';
 import Thiamethoxam30 from '../assets/images/Thiamethoxam30.png';
+import EmamectionBenzoate from '../assets/images/Emamection-Benzoate.png'
+
 
 const products = [
     { id: "1", name: "Abamectin 1.9% EC", image: Humiking },
     { id: "2", name: "Azoxystrobin 11% + Tebuconazole 18.3% SC", image: KingStar },
     { id: "3", name: "Emamectin Benzoate 1.9% EC", image: HumiHub },
-    { id: "4", name: "Emamectin Benzoate 5% SG", image: Humiking },
+    { id: "4", name: "Emamectin Benzoate 5% SG", image: EmamectionBenzoate },
     { id: "5", name: "Glyphosate 41% SL", image: Humiking },
     { id: "6", name: "Glyphosate 71% SG", image: Humiking },
     { id: "7", name: "Hexaconazole 5% SC", image: Humiking },

@@ -8,7 +8,6 @@ import SiliconSpreaders from '../assets/images/Silicon-Spreaders.png'
 import PGRTablets from '../assets/images/PGR-Tablets.png' 
 import HumicShinnyBall from '../assets/images/Humic-Shinny-Ball.png' 
 import FulvicAcid from '../assets/images/Fulvic-Acid.png' 
-import EmamectionBenzoate from '../assets/images/Emamection-Benzoate.png'
 
 const products = [
     { id: "Fungi king", name: "Fungi King", image: fungiking },
@@ -16,7 +15,6 @@ const products = [
     { id: "PGR Tablets", name: "PGR Tablets", image: PGRTablets },
     { id: "Humic Shinny Ball", name: "Humic Shinny Ball", image: HumicShinnyBall },
     { id: "Fulvic Acid", name: "Fulvic Acid", image: FulvicAcid },
-    { id: "Emamection Benzoate", name: "Emamection Benzoate", image: EmamectionBenzoate },
 ];
 
 const OtherProduct = () => {

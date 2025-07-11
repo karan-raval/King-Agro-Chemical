@@ -81,7 +81,7 @@ const Header = () => {
               <MenuItem onClick={handleDropdownClose} component={Link} to="/products/Pesticides">
                 PESTICIDES
               </MenuItem>
-              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/pgr">
+              <MenuItem onClick={handleDropdownClose} component={Link} to="/products/bio-pesticides">
                 BIO-PESTICIDES
               </MenuItem>
               <MenuItem onClick={handleDropdownClose} component={Link} to="/products/other-product">

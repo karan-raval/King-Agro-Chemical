@@ -12,6 +12,7 @@ import SinglePGR from '../Pages/SinglePGR';
 import OtherProduct from '../Pages/OtherProduct';
 import OtherSinplePage from '../Pages/OtherSinplePage';
 import Pesticides from '../Pages/Pesticides';
+import Biopesticides from '../Pages/Biopesticides';
 
 const MainRoutes = () => {
   return (
@@ -25,6 +26,8 @@ const MainRoutes = () => {
         <Route path="/products/other-product/:productId" element={<OtherSinplePage/>} />
         <Route path="/products/pgr" element={<PGR/>} />
         <Route path="/products/pesticides" element={<Pesticides/>} />
+        <Route path="/products/bio-pesticides" element={<Biopesticides/>} />
+        <Route path="/products/bio-pesticides/:productId" element={<Biopesticides/>} />
         <Route path="/product/pgr/:productId" element={<SinglePGR />} />
         <Route path="/download" element={<Download/>} />
         <Route path="/contact" element={<ContactUs/>} />

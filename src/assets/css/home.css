@@ -65,7 +65,7 @@
   padding: 10px;
   cursor: pointer;
   font-size: 2rem;
-  z-index: 10;
+  z-index: 1;
 }
 
 .prev {
