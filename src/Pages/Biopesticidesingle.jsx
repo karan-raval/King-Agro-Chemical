@@ -4,17 +4,15 @@ import { Grid, Typography, Card, Box, Table, TableBody, TableCell, TableContaine
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import '../assets/css/singlepgr.css'
-import KingPower from '../assets/images/King-Power.png'
-import KingStar from '../assets/images/King-Star.png'
-import HumiHub from '../assets/images/Humi-Hub.png'
-import KingBlast from '../assets/images/King-Blast.png'
-import Humiking from '../assets/images/Humiking.png'
-import Nutriking from '../assets/images/Nutriking.png'
+
+import biolarvicide from '../assets/images/biolarvicide.png';
+import thipsandmites from '../assets/images/thipsandmites.png';
+import whitefly from '../assets/images/whitefly.png';
 
 const products = {
-    "king-power": {
-        Name: "King Power",
-        image: KingPower,
+    "Larvicide": {
+        Name: "Larvicide",
+        image: biolarvicide,
         description: "High-quality growth enhancer for plants.",
         TargetCrops: "All Vegetables, Fruits and crops",
         Dose: "20 ml per 15 ltr. water",
@@ -22,9 +20,9 @@ const products = {
         Brand: "King Power",
         PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
     },
-    "king-star": {
-        Name: "King Star",
-        image: KingStar,
+    "Thrips & mites": {
+        Name: "Thrips & mites",
+        image: thipsandmites,
         description: "Boosts plant immunity and overall health.",
         TargetCrops: "All Vegetables, Fruits and crops",
         Materials: "Humic, SNP",
@@ -34,46 +32,15 @@ const products = {
         Brand: "King Star",
         PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
     },
-    "humi-hub": {
-        Name: "Humi-Hub",
-        image: HumiHub,
+    "White fly": {
+        Name: "White fly",
+        image: whitefly,
         description: "Improves soil fertility and moisture retention.",
         Materials: "Humic, Amino, Fulvic",
         TargetCrops: "All Vegetables, Fruits and crops",
         Dose: "20 ml per 15 ltr. water",
         Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
         Brand: "HumiHub",
-        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
-    },
-    "king-blast": {
-        Name: "King Blast",
-        image: KingBlast,
-        TargetCrops: "All Vegetables, Fruits and crops",
-        Materials: "Humic, Amino, Fulvic, Seaweed",
-        Dose: "20 ml per 15 ltr. water",
-        Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
-        Brand: "King Blast",
-        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
-    },
-    "humiking": {
-        Name: "Humiking",
-        image: Humiking,
-        TargetCrops: "All Vegetables, Fruits and crops",
-        Materials: "Humic Liquid",
-        Dose: "20 ml per 15 ltr. water",
-        Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
-        Brand: "Humiking",
-        PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
-    },
-    "nutriking": {
-        Name: "Nutriking",
-        image: Nutriking,
-        description: "MIX MICRONUTRENT",
-        TargetCrops: "All Vegetables, Fruits and crops",
-        Materials: "All Micronutrient",
-        Dose: "20 ml per 15 ltr. water",
-        Application: "All type of Crops like Rice, Groundnut, Fruits & Vegetables",
-        Brand: "Nutriking",
         PackagingSize: "100ml, 250ml ,500ml ,  1 Litre"
     }
 };
@@ -101,10 +68,10 @@ const Biopesticidesingle = () => {
             <Grid container spacing={2} sx={{ padding: "20px 5%" }}>
                 <Grid item xs={12} md={3}>
                     <Card sx={{ padding: 2 }}>
-                        <Typography variant="h6" fontWeight="bold" sx={{ background: "#2E7D32", color: "white", padding: 1, textAlign: "center" }}>PGR PRODUCTS</Typography>
+                        <Typography variant="h6" fontWeight="bold" sx={{ background: "#2E7D32", color: "white", padding: 1, textAlign: "center" }}>Bio-PESTICIDE PRODUCTS</Typography>
                         <Box sx={{ display: "flex", flexDirection: "column", mt: 2 }}>
                             {Object.keys(products).map((key) => (
-                                <Link to={`/product/pgr/${key}`} key={key} style={{ textDecoration: "none", color: "inherit" }}>
+                                <Link to={`/products/bio-pesticides/${key}`} key={key} style={{ textDecoration: "none", color: "inherit" }}>
                                     <Typography
                                         sx={{ padding: "8px 12px", cursor: "pointer", background: key === productId ? "#C8E6C9" : "transparent", borderRadius: "5px", '&:hover': { background: "#A5D6A7" } }}
                                     >
